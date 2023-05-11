@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/a27049c236.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <!-- <body> 
     <div class="container">
@@ -72,12 +73,35 @@
 <body>
     <div class="container">
         <nav class="navbar navbar-light bg-light">
-            <div class="container-fluid">
-                <i class="fa-brands fa-instagram">   Instagram</i>
-                <button type="button" class="">New post</button>
+            <div class="row container-fluid">
+                <div class="col-6">
+                    <div class="container-fluid">
+                        <i class="fa-brands fa-instagram">Instagram</i>
+                    </div>
+                </div>
+
+                <div class="col-6 d-inline-flex justify-content-end">
+                    <button type="button" class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        New Post
+                    </button>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-gear-fill"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Profile</a></li>
+                          <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                          <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                          <li><a class="dropdown-item text-danger" href="#">Log Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </nav>   
     </div>
+
+
     <!-- PINCHE PILLS FUNCIONANDO -->
     <ul class="nav nav-pills justify-content-center">
         <li class="nav-item">
@@ -89,6 +113,37 @@
     </ul>
 
 
+
+
+
+
+<!-- Modal content -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="piCaption" class="form-label">Caption:</label>
+                    <textarea type="email" class="form-control" id="piCaption" aria-describedby="emailHelp"></textarea>
+                    <button type="button" class="btn btn-light mt-1"><i class="bi bi-camera-fill"></i></button>
+                    <button type="button" class="btn btn-light mt-1"><i class="bi bi-geo-alt-fill"></i></i></button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Publish</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
     
     
     <div class="tab-content">
@@ -96,133 +151,132 @@
         <div class="tab-pane fade show active" id="cubo">
             <div class="row justify-content-center">
                <div class="col-sm-3 justify-content-center">
-                   <div class="border border-secondary ps-3 pt-2 pb-2 fs-4 mt-2">
+                   <div class="border border-secondary-emphasis ps-3 pt-2 pb-2 fs-4 mt-2 rounded-top">
                     <strong>My Crazy Dog Spark!</strong>
                    </div>
                    <div>
                     <img src="https://us.123rf.com/450wm/aprillrain/aprillrain2209/aprillrain220900194/191556087-imagen-abstracta-de-los-cielos-abiertos-el-camino-el-camino-al-cielo-ilustraci%C3%B3n-de-alta-calidad.jpg?ver=6" class="img-fluid w-100" alt="arbol">
                    </div>
-                   <div class="border border-secondary ps-3 pt-2 pb-2">
+                   <div class="border border-secondary-emphasis ps-3 pt-2 pb-2 rounded-bottom">
                       <strong>204 likes</strong>
                       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio amet rem id dolores ea tempora minima! Sit velit cupiditate nam!</p>    
                    </div>
                 </div>
-            </div>    
-            <div class="row justify-content-center pt-5">
+            </div>                   
+            <div class="row justify-content-center">
                <div class="col-sm-3 justify-content-center">
-                   <div class="border border-secondary ps-3 pt-2 pb-2 fs-4 mt-2">
+                   <div class="border border-secondary-emphasis ps-3 pt-2 pb-2 fs-4 mt-2 rounded-top">
                     <strong>My Crazy Dog Spark!</strong>
                    </div>
                    <div>
                     <img src="https://us.123rf.com/450wm/aprillrain/aprillrain2209/aprillrain220900194/191556087-imagen-abstracta-de-los-cielos-abiertos-el-camino-el-camino-al-cielo-ilustraci%C3%B3n-de-alta-calidad.jpg?ver=6" class="img-fluid w-100" alt="arbol">
                    </div>
-                   <div class="border border-secondary ps-3 pt-2 pb-2">
+                   <div class="border border-secondary-emphasis ps-3 pt-2 pb-2 rounded-bottom">
                       <strong>204 likes</strong>
                       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio amet rem id dolores ea tempora minima! Sit velit cupiditate nam!</p>    
                    </div>
                 </div>
-            </div>    
-            <div class="row justify-content-center pt-5">
+            </div>                   
+            <div class="row justify-content-center">
                <div class="col-sm-3 justify-content-center">
-                   <div class="border border-secondary ps-3 pt-2 pb-2 fs-4 mt-2">
+                   <div class="border border-secondary-emphasis ps-3 pt-2 pb-2 fs-4 mt-2 rounded-top">
                     <strong>My Crazy Dog Spark!</strong>
                    </div>
                    <div>
                     <img src="https://us.123rf.com/450wm/aprillrain/aprillrain2209/aprillrain220900194/191556087-imagen-abstracta-de-los-cielos-abiertos-el-camino-el-camino-al-cielo-ilustraci%C3%B3n-de-alta-calidad.jpg?ver=6" class="img-fluid w-100" alt="arbol">
                    </div>
-                   <div class="border border-secondary ps-3 pt-2 pb-2">
+                   <div class="border border-secondary-emphasis ps-3 pt-2 pb-2 rounded-bottom">
                       <strong>204 likes</strong>
                       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio amet rem id dolores ea tempora minima! Sit velit cupiditate nam!</p>    
                    </div>
                 </div>
-            </div>    
-            <div class="row justify-content-center pt-5">
+            </div>                   
+            <div class="row justify-content-center">
                <div class="col-sm-3 justify-content-center">
-                   <div class="border border-secondary ps-3 pt-2 pb-2 fs-4 mt-2">
+                   <div class="border border-secondary-emphasis ps-3 pt-2 pb-2 fs-4 mt-2 rounded-top">
                     <strong>My Crazy Dog Spark!</strong>
                    </div>
                    <div>
                     <img src="https://us.123rf.com/450wm/aprillrain/aprillrain2209/aprillrain220900194/191556087-imagen-abstracta-de-los-cielos-abiertos-el-camino-el-camino-al-cielo-ilustraci%C3%B3n-de-alta-calidad.jpg?ver=6" class="img-fluid w-100" alt="arbol">
                    </div>
-                   <div class="border border-secondary ps-3 pt-2 pb-2">
+                   <div class="border border-secondary-emphasis ps-3 pt-2 pb-2 rounded-bottom">
                       <strong>204 likes</strong>
                       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio amet rem id dolores ea tempora minima! Sit velit cupiditate nam!</p>    
                    </div>
                 </div>
-            </div>    
-            <div class="row justify-content-center pt-5">
+            </div>                   
+            <div class="row justify-content-center">
                <div class="col-sm-3 justify-content-center">
-                   <div class="border border-secondary ps-3 pt-2 pb-2 fs-4 mt-2">
+                   <div class="border border-secondary-emphasis ps-3 pt-2 pb-2 fs-4 mt-2 rounded-top">
                     <strong>My Crazy Dog Spark!</strong>
                    </div>
                    <div>
                     <img src="https://us.123rf.com/450wm/aprillrain/aprillrain2209/aprillrain220900194/191556087-imagen-abstracta-de-los-cielos-abiertos-el-camino-el-camino-al-cielo-ilustraci%C3%B3n-de-alta-calidad.jpg?ver=6" class="img-fluid w-100" alt="arbol">
                    </div>
-                   <div class="border border-secondary ps-3 pt-2 pb-2">
+                   <div class="border border-secondary-emphasis ps-3 pt-2 pb-2 rounded-bottom">
                       <strong>204 likes</strong>
                       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio amet rem id dolores ea tempora minima! Sit velit cupiditate nam!</p>    
                    </div>
                 </div>
-            </div>    
-            <div class="row justify-content-center pt-5">
+            </div>                   
+            <div class="row justify-content-center">
                <div class="col-sm-3 justify-content-center">
-                   <div class="border border-secondary ps-3 pt-2 pb-2 fs-4 mt-2">
+                   <div class="border border-secondary-emphasis ps-3 pt-2 pb-2 fs-4 mt-2 rounded-top">
                     <strong>My Crazy Dog Spark!</strong>
                    </div>
                    <div>
                     <img src="https://us.123rf.com/450wm/aprillrain/aprillrain2209/aprillrain220900194/191556087-imagen-abstracta-de-los-cielos-abiertos-el-camino-el-camino-al-cielo-ilustraci%C3%B3n-de-alta-calidad.jpg?ver=6" class="img-fluid w-100" alt="arbol">
                    </div>
-                   <div class="border border-secondary ps-3 pt-2 pb-2">
+                   <div class="border border-secondary-emphasis ps-3 pt-2 pb-2 rounded-bottom">
                       <strong>204 likes</strong>
                       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio amet rem id dolores ea tempora minima! Sit velit cupiditate nam!</p>    
                    </div>
                 </div>
-            </div>    
-            <div class="row justify-content-center pt-5">
+            </div>                   
+            <div class="row justify-content-center">
                <div class="col-sm-3 justify-content-center">
-                   <div class="border border-secondary ps-3 pt-2 pb-2 fs-4 mt-2">
+                   <div class="border border-secondary-emphasis ps-3 pt-2 pb-2 fs-4 mt-2 rounded-top">
                     <strong>My Crazy Dog Spark!</strong>
                    </div>
                    <div>
                     <img src="https://us.123rf.com/450wm/aprillrain/aprillrain2209/aprillrain220900194/191556087-imagen-abstracta-de-los-cielos-abiertos-el-camino-el-camino-al-cielo-ilustraci%C3%B3n-de-alta-calidad.jpg?ver=6" class="img-fluid w-100" alt="arbol">
                    </div>
-                   <div class="border border-secondary ps-3 pt-2 pb-2">
+                   <div class="border border-secondary-emphasis ps-3 pt-2 pb-2 rounded-bottom">
                       <strong>204 likes</strong>
                       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio amet rem id dolores ea tempora minima! Sit velit cupiditate nam!</p>    
                    </div>
                 </div>
-            </div>    
-            <div class="row justify-content-center pt-5">
+            </div>                   
+            <div class="row justify-content-center">
                <div class="col-sm-3 justify-content-center">
-                   <div class="border border-secondary ps-3 pt-2 pb-2 fs-4 mt-2">
+                   <div class="border border-secondary-emphasis ps-3 pt-2 pb-2 fs-4 mt-2 rounded-top">
                     <strong>My Crazy Dog Spark!</strong>
                    </div>
                    <div>
                     <img src="https://us.123rf.com/450wm/aprillrain/aprillrain2209/aprillrain220900194/191556087-imagen-abstracta-de-los-cielos-abiertos-el-camino-el-camino-al-cielo-ilustraci%C3%B3n-de-alta-calidad.jpg?ver=6" class="img-fluid w-100" alt="arbol">
                    </div>
-                   <div class="border border-secondary ps-3 pt-2 pb-2">
+                   <div class="border border-secondary-emphasis ps-3 pt-2 pb-2 rounded-bottom">
                       <strong>204 likes</strong>
                       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio amet rem id dolores ea tempora minima! Sit velit cupiditate nam!</p>    
                    </div>
                 </div>
-            </div>    
-            <div class="row justify-content-center pt-5">
+            </div>                   
+            <div class="row justify-content-center">
                <div class="col-sm-3 justify-content-center">
-                   <div class="border border-secondary ps-3 pt-2 pb-2 fs-4 mt-2">
+                   <div class="border border-secondary-emphasis ps-3 pt-2 pb-2 fs-4 mt-2 rounded-top">
                     <strong>My Crazy Dog Spark!</strong>
                    </div>
                    <div>
                     <img src="https://us.123rf.com/450wm/aprillrain/aprillrain2209/aprillrain220900194/191556087-imagen-abstracta-de-los-cielos-abiertos-el-camino-el-camino-al-cielo-ilustraci%C3%B3n-de-alta-calidad.jpg?ver=6" class="img-fluid w-100" alt="arbol">
                    </div>
-                   <div class="border border-secondary ps-3 pt-2 pb-2">
+                   <div class="border border-secondary-emphasis ps-3 pt-2 pb-2 rounded-bottom">
                       <strong>204 likes</strong>
                       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio amet rem id dolores ea tempora minima! Sit velit cupiditate nam!</p>    
                    </div>
                 </div>
-            </div>    
-               
+            </div>                   
         </div>
-
+      
         
         <div class="tab-pane fade" id="grid">
             <div class="container">
@@ -275,7 +329,7 @@
         <div class="tab-pane fade show active " id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">..sdsdsd.</div>
         <div class="tab-pane fade" id="pills-profile " role="tabpanel" aria-labelledby="pills-profile-tab">.dsds..</div>
         
-      </div>-->
+    </div>-->
 
 
 
